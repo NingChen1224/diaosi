@@ -7,6 +7,7 @@
 		"gulp-uglify":"*",
 		"gulp-less":"*",
 		"gulp-watch":"*",
-		"gulp-browserify":""
+		"gulp-browserify":"*",
+		"gulp-copy":"*"
 	}
 }
