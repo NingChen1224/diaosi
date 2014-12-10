@@ -1,0 +1,12 @@
+{
+	"name":"diaosi-vs-boss",
+	"description":"屌丝战队第一款产品",
+	"version":"0.0.1",
+	"dependencies":{
+		"gulp":"*",
+		"gulp-uglify":"*",
+		"gulp-less":"*",
+		"gulp-watch":"*",
+		"gulp-browserify":""
+	}
+}
