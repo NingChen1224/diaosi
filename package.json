@@ -8,6 +8,11 @@
 		"gulp-less":"*",
 		"gulp-watch":"*",
 		"gulp-browserify":"*",
-		"gulp-copy":"*"
+		"gulp-file-copy":"*",
+		"grunt-browserify":"*",
+		"grunt-contrib-uglify":"*",
+		"grunt-contrib-copy":"*",
+		"grunt-contrib-less":"*",
+		"grunt-contrib-watch":"*"
 	}
 }

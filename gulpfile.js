@@ -5,7 +5,7 @@ var gulp = require("gulp"),
 	less = require("gulp-less"),
 	watch = require("gulp-watch"),
 	browserify = require("gulp-browserify"),
-	copy = require("gulp-copy");
+	copy = require("gulp-file-copy");
 
 //对js文件进行编译和压缩
 
@@ -16,4 +16,22 @@ gulp.task("uglify",function(){
 	.pipe(gulp.dest('./build/js')); //输出到目的文件夹
 });
 
-gulp.task("default",["uglify"]);
+gulp.task("less",function(){
+	gulp.src("./src/css/*.less")
+	.pipe(less())
+	.pipe(gulp.dest("./build/css"));
+});
+
+gulp.task("copy",function(){
+	gulp.src('./src/html')
+	.pipe(copy('./build/html'),{start:'./src/html'});
+	
+});
+//监听文件变化 并实时对其重新编译
+gulp.task("watch",function(){
+
+	gulp.watch(['./src/js/*.js','./src/css/*.less','./src/html/*.html'],
+		['uglify','less','copy']);
+});
+
+gulp.task("default",["uglify",'less','copy']);
